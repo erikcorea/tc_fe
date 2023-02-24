@@ -55,7 +55,7 @@ const UserWidget = ({ userId, picturePath }) => {
             <FlexBetween
                gap="0.5rem"
                pb="1.5rem"
-               onClick={() => naviage(`/profile/${userId}`)}
+               onClick={() => navigate(`/profile/${userId}`)}
             >
               <FlexBetween gap="1rem">
                 <UserImage image={picturePath} />
@@ -75,8 +75,9 @@ const UserWidget = ({ userId, picturePath }) => {
                     </Typography>
                     <Typography color={medium}>{friends.length}</Typography>
                 </Box>
-                <ManageAccountsOutlined />
               </FlexBetween>
+              <ManageAccountsOutlined />
+            </FlexBetween>
 
               <Divider />
 
@@ -141,7 +142,6 @@ const UserWidget = ({ userId, picturePath }) => {
                 </FlexBetween>
 
               </Box>
-            </FlexBetween>
         </WidgetWrapper>
     )
 };
